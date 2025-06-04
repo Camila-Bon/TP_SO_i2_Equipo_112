@@ -4,4 +4,5 @@ ALFA: Camila Bonahora
 BETA: Tomas Jeronimo Cabrera Osuna
 GAMMA: Ramiro Albornoz
 
-A) Descargando el archivo localmente, modificando el texto,
+A) Con el comando git pull
+B) 

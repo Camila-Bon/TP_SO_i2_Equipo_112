@@ -1,1 +1,7 @@
 Nuevo archivo creado por beta
+"respuesta_I2_Equipo_112”
+ALFA: Camila Bonahora
+BETA: Tomas Jeronimo Cabrera Osuna
+GAMMA: Ramiro Albornoz
+
+A) Descargando el archivo localmente, modificando el texto,

@@ -1,8 +1,1 @@
-Nuevo archivo creado por beta
-"respuesta_I2_Equipo_112”
-ALFA: Camila Bonahora
-BETA: Tomas Jeronimo Cabrera Osuna
-GAMMA: Ramiro Albornoz
 
-A) Con el comando git pull
-B) 

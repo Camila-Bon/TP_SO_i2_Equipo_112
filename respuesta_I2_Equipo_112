@@ -2,3 +2,62 @@ ALFA :Camila Bonahora
 BETA: Tomas Jeronimo Cabrera Osuna
 GAMMA: Ramiro Albornoz
 
+---
+
+a-¿Cómo actualizo mi repositorio, al estado que esté el repo que hice FORK?
+Se puede actualizar agregando el repositorio original como remoto con el nombre `upstream`, luego haciendo fetch y merge:
+  git remote add upstream https://github.com/Cabrerajeronimo/TP_SO_i2_Equipo_112.git
+  git fetch upstream
+  git merge upstream/main
+
+---
+
+b- ¿Puede ALFA actualizar su FORK al estado del fork de GAMMA?
+No directamente. ALFA puede actualizar el fork solo desde el repositorio original (el de BETA). Para tomar cambios del fork de GAMMA tendría que agregarlos como remoto también..
+
+---
+
+c- ¿Puede GAMMA actualizar su FORK al estado del fork de ALFA?
+Tampoco directamente. GAMMA puede actualizar desde el original de BETA. Para tomar cambios de ALFA tendría que agregarlos como remoto o hacer un pull manual con los archivos.
+
+---
+
+d- ¿Los datos que tenía en mi repositorio, editados por mí, se pierden si quiero actualizar el fork?
+No se pierden si se hace un "merge". 
+Git intenta combinar los cambios. Si hay conflictos, se deben resolver manualmente.
+
+---
+
+e- Listado, paso a paso, de los comandos necesarios para resolver este TP:
+# 1. BETA crea el repositorio con README y fork.txt  
+(lo hace BETA desde GitHub)
+
+# 2. GAMMA hace fork, edita y hace push:
+git clone https://github.com/ramialbornoz/TP_SO_i2_Equipo-2-.git
+(edita fork.txt con sus datos) 
+git add fork.txt  
+git commit -m "GAMMA agregó sus datos"  
+git push origin main
+
+# 3. ALFA hace fork, edita y hace push:
+git clone https://github.com/Camila-Bon/TP_SO_i2_Equipo_112.git
+(edita fork.txt con sus datos) 
+git add fork.txt  
+git commit -m "ALFA agregó sus datos"  
+git push origin main
+
+# 4. BETA agrega un nuevo archivo:
+(crea NuevoDato.txt y lo sube)  
+git add NuevoDato.txt  
+git commit -m "Agrega NuevoDato.txt"  
+git push origin main
+
+# 5. ALFA y GAMMA actualizan desde el repositorio de BETA:
+git remote add upstream https://github.com/Cabrerajeronimo/TP_SO_i2_Equipo_112.git 
+git fetch upstream  
+git merge upstream/main
+
+# 6. Suben este archivo con todas las respuestas:
+git add respuesta_I2_EquipoX.txt  
+git commit -m "Respuestas TP completadas"  
+git push origin main
